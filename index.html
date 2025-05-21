@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CipherCraft: Encryption & Decryption Tool</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="stylesheet" href="src/styles/components.css">
+  <link rel="stylesheet" href="src/styles/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>CipherCraft</h1>
+      <p class="subtitle">Explore Classical Encryption & Decryption Algorithms</p>
+    </header>
+
+    <main>
+      <div class="cipher-selector">
+        <div class="cipher-categories">
+          <button class="category-btn active" data-category="monoalphabetic">Monoalphabetic</button>
+          <button class="category-btn" data-category="polyalphabetic">Polyalphabetic</button>
+          <button class="category-btn" data-category="transposition">Transposition</button>
+        </div>
+
+        <div class="cipher-types" id="cipher-types">
+          <!-- Cipher type buttons will be inserted here by JavaScript -->
+        </div>
+      </div>
+
+      <div class="cipher-container">
+        <h2 id="selected-cipher-title">Additive Cipher</h2>
+        <p id="selected-cipher-description" class="cipher-description">A simple substitution cipher that shifts letters by a fixed value.</p>
+
+        <div class="input-section">
+          <div class="text-area-container">
+            <label for="input-text">Input Text</label>
+            <textarea id="input-text" placeholder="Enter text to encrypt or decrypt..."></textarea>
+          </div>
+
+          <div class="key-section">
+            <label for="key-input">Key</label>
+            <input type="text" id="key-input" placeholder="Enter key...">
+            <div class="key-help" id="key-help">
+              <p>For additive cipher, use a number from 1-25</p>
+            </div>
+          </div>
+
+          <div class="operation-buttons">
+            <button id="encrypt-btn" class="primary-btn">Encrypt</button>
+            <button id="decrypt-btn" class="secondary-btn">Decrypt</button>
+          </div>
+        </div>
+
+        <div class="output-section">
+          <div class="text-area-container">
+            <label for="output-text">Result</label>
+            <textarea id="output-text" readonly></textarea>
+            <button id="copy-btn" class="icon-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>CipherCraft © 2025 | Educational Tool for Cryptography</p>
+    </footer>
+  </div>
+
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
